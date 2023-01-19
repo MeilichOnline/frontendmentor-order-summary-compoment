@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | Order summary card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -14,23 +18,25 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
+<body class="container">
   <main>
     <article>
-      <div class="order__summary">
+      <div class="card__summary">
         <picture><img src="images/illustration-hero.svg" alt=""></picture>
-        <h1 class="order__title">Order Summary</h1>
-        <p class="order__description">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
-        <div class="order_details">
-          <img class="order_details__icon" src="images/icon-music.svg" alt="">
-          <div class="order__details__plan">
-            <h3 class="order__details__plan__title">Annual Plan</h3>
-            <p class="order__details__plan__costs">$59.99/year</p>
+        <section class="card__information">
+          <h1 class="card__title">Order Summary</h1>
+          <p class="card__description">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+          <div class="card_details">
+            <img class="card__icon" src="images/icon-music.svg" alt="">
+            <div class="card__plan">
+              <h4 class="card__plan__title">Annual Plan</h4>
+              <p class="card__plan__costs">$59.99/year</p>
+            </div>
+            <a class="card__button__change" href="#">Change</a>
           </div>
-          <a href="#">Change</a>
-        </div>
-        <button>Proceed to Payment</button>
-        <button>Cancel Order</button>
+          <button class="card__button__proceed">Proceed to Payment</button>
+          <button class="card__button__cancel">Cancel Order</button>      
+        </section>
       </div>
     </article>
   </main>
