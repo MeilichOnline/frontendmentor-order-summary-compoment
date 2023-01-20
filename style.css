@@ -32,6 +32,14 @@ img {
     place-content: center;
     display: grid;
 
+    background-image: url(images/pattern-background-mobile.svg);
+    background-size: cover;
+}
+
+@media (min-width="375px") {
+    .container {
+        background-image: url(images/pattern-background-desktop.svg);
+    }
 }
 
 .card__summary {
@@ -99,6 +107,11 @@ img {
 
 }
 
+.card__button__change:hover {
+    opacity: 65%;
+    cursor: pointer;
+}
+
 .card__button__proceed{
     background-color: var(--clr-primary-bright-blue);
     color: white;
@@ -107,7 +120,7 @@ img {
     border-radius: 1rem;
     border-color: white;
     font-weight: var(--fweight-bold);
-
+    outline: none;
 }
 
 .card__button__cancel{
@@ -117,6 +130,11 @@ img {
     padding: 1rem;
     border-radius: 1rem;
     border-color: white;
-    font-weight: var(--fweight-bold);
+    font-weight: var(--fweight-bold);    
+    cursor: pointer;
+}
 
+.card__button__proceed:hover {
+    opacity: 65%;
+    cursor: pointer;
 }
