@@ -25,16 +25,24 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+
+    background-color: var(--Pale-blue);
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}   
 
 article {
     font-family: 'Red Hat Display', sans-serif;
-    border: 1px solid black;
-    border-radius: 1.125rem;
+    border-radius: 1.125em;
     overflow: hidden;
-    width: 300px;
+    width: 334px;
     display: grid;
     text-align: center;
+
+    background-color: white;
+    box-shadow: 0 8px 30px 0 rgba(0,0,0,0.2);
+
 }
 
 article > img {
@@ -43,7 +51,16 @@ article > img {
 }
 
 article > div {
-    margin: 1.725rem 1.1725rem .725rem 1.725rem;
+    margin: 1.725em 1.1725em .725em 1.725em;
+}
+
+article > div > h1 {
+    padding-bottom: .725em;    
+    font-weight: 900;
+}
+
+article > div > p {
+    color: var(--Desaturated-blue);
 }
 
 article > section {
@@ -52,9 +69,67 @@ article > section {
     justify-content: space-around;
     align-items: center;
     background-color: var(--Very-pale-blue);
-    margin: 1.125rem;
-    padding-block: .725rem;
-    border-radius: .725rem;
-
+    margin: 1.125em;
+    padding-block: .725em;
+    border-radius: .725em;
 }
+
+article > section > div > p {
+    color: var(--Desaturated-blue);
+    font-size: .8em;
+}
+
+article > section > a {
+    color: var(--Bright-blue);
+    font-weight: 900;
+    font-size: .8em;
+}
+
+article > section > a:hover {
+    filter: opacity         (.7);
+    text-decoration: none;
+}
+
+.goToButton {
+    margin: 1.125em 1.125em 0 1.125em;
+    padding: 1.125em;
+    border-radius: .725em;
+    color: white;
+    background-color: var(--Bright-blue);
+    font-weight: 700;
+    border: 0;    
+    box-shadow: 0 8px 9px 0 rgba(0,0,0,0.2);
+    z-index: 3;
+}
+
+.goToButton:hover {
+    filter: opacity(.7);
+    cursor: pointer;
+}
+
+.noGoButton {
+    margin: 0 1.125em 0 1.125em;
+    padding: 1.125em;
+    margin-bottom: 1.125em;
+    border-radius: .725em;
+    color: var(--Desaturated-blue);
+    background-color: inherit;
+    font-weight: 700;
+    border: 0;    
+    z-index: 2;
+}
+
+.noGoButton:hover {
+    color: var(--Dark-blue);
+    cursor: pointer;
+}
+
+@media (min-width:1024px) {
+    main {
+        background-image: url(images/pattern-background-desktop.svg);
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+}
+
 
